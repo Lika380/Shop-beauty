@@ -69,13 +69,20 @@ export function Home() {
   return (
     <>
       <div className="hero">
-        <img src="/bg.webp" alt="" />
+        <img src={`${import.meta.env.BASE_URL}bg.webp`} alt="" />
         <div className="hero-content">
           <div className="hero-text">
             <p className="hero-eyebrow">Скидки дня</p>
             <h1>Скидки до &minus;60%</h1>
             <p className="hero-subtitle">Выбирайте любимые товары дешевле, чем обычно</p>
-            <a href="#catalog" className="hero-cta">
+            <a
+              href="#catalog"
+              className="hero-cta"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Смотреть каталог →
             </a>
           </div>

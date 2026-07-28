@@ -19,7 +19,7 @@ const list = {
 const create = {
   body: z.object({
     name: z.string().trim().min(1, 'is required'),
-    description: z.string().trim().optional(),
+    description: z.string().trim().optional().nullable(),
     price: z.coerce.number().nonnegative('must be zero or greater'),
     stock_quantity: z.coerce.number().int().nonnegative().default(0),
     category_id: z.coerce.number().int().positive().optional().nullable(),
@@ -31,7 +31,7 @@ const update = {
   params: idParam.params,
   body: z.object({
     name: z.string().trim().min(1).optional(),
-    description: z.string().trim().optional(),
+    description: z.string().trim().optional().nullable(),
     price: z.coerce.number().nonnegative().optional(),
     stock_quantity: z.coerce.number().int().nonnegative().optional(),
     category_id: z.coerce.number().int().positive().optional().nullable(),

@@ -64,19 +64,14 @@ const resendVerification = asyncHandler(async (req, res) => {
   const { email } = req.body;
 
   const user = await userModel.findByEmail(email);
-  if (!user) {
-    throw AppError.notFound('No account found with this email');
+  let code;
+  if (user && !user.email_verified) {
+    code = await issueVerificationCode(user.id, user.email);
   }
-
-  if (user.email_verified) {
-    throw AppError.badRequest('Email is already verified', 'ALREADY_VERIFIED');
-  }
-
-  const code = await issueVerificationCode(user.id, user.email);
 
   res.json({
-    message: 'Verification code resent.',
-    email: user.email,
+    message: 'If an account with this email exists and is not yet verified, a new code has been sent.',
+    email,
     ...(isProduction ? {} : { dev_verification_code: code }),
   });
 });

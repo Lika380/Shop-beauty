@@ -54,8 +54,8 @@ export function AdminProductForm() {
     try {
       const payload: ProductInput = {
         ...form,
-        description: form.description?.trim() || undefined,
-        image_url: form.image_url?.trim() || undefined,
+        description: form.description?.trim() || null,
+        image_url: form.image_url?.trim() || null,
       };
       if (isEdit && id) {
         await updateProduct(Number(id), payload);

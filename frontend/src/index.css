@@ -312,10 +312,6 @@ border-bottom: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
   color: white;
   font-weight: 600;
 }
-.btn-primary:hover:not(:disabled) {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
 
 .btn-link {
   background: none;

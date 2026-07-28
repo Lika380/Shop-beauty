@@ -20,11 +20,11 @@ export function getProduct(id: number | string): Promise<Product> {
 
 export interface ProductInput {
   name: string;
-  description?: string;
+  description?: string | null;
   price: number;
   stock_quantity: number;
   category_id?: number | null;
-  image_url?: string;
+  image_url?: string | null;
 }
 
 export function createProduct(input: ProductInput): Promise<Product> {
