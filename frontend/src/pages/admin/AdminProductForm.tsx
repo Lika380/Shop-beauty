@@ -89,7 +89,7 @@ export function AdminProductForm() {
         <label>
           Описание
           <textarea
-            value={form.description}
+            value={form.description ?? ''}
             onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
           />
         </label>
@@ -132,7 +132,7 @@ export function AdminProductForm() {
           Ссылка на изображение
           <input
             type="url"
-            value={form.image_url}
+            value={form.image_url ?? ''}
             onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
           />
         </label>
