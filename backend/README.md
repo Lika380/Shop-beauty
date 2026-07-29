@@ -13,7 +13,7 @@ npm run seed
 npm start
 ```
 
-Сервер: `http://localhost:3000`
+Сервер: `http://localhost:3001`
 
 ## Тестовые пользователи (после seed)
 
