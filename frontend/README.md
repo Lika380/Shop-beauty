@@ -3,7 +3,7 @@
 Фронтенд интернет-магазина на React + Vite + TypeScript.
 Работает поверх REST API бэкенда (Node/Express + PostgreSQL).
 
-🔗 **[Смотреть сайт]([https://lika380.github.io/shop-beauty/](https://lika380.github.io/Shop-beauty/#/))**
+🔗 **[Смотреть сайт](https://lika380.github.io/Shop-beauty/#/)**
 
 ## Стек
 
