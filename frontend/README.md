@@ -3,7 +3,7 @@
 Фронтенд интернет-магазина на React + Vite + TypeScript.
 Работает поверх REST API бэкенда (Node/Express + PostgreSQL).
 
-🔗 **[Смотреть сайт](https://lika380.github.io/shop-beauty/)**
+🔗 **[Смотреть сайт]([https://lika380.github.io/shop-beauty/](https://lika380.github.io/Shop-beauty/#/))**
 
 ## Стек
 
@@ -23,10 +23,6 @@ npm run dev
 
 Откроется на `http://localhost:5173`.
 
-В `.env` укажите адрес backend:
-```
-VITE_API_URL=http://localhost:3000
-```
 
 ## Что умеет
 
@@ -50,5 +46,5 @@ src/
 ## Особенности API, которые важно знать
 
 - Списки приходят в формате `{ data: [...], pagination: {...} }`
-- Цены иногда приходят строкой (особенность Postgres) — форматируются через `utils/format.ts`
+- Цены иногда приходят строкой (особенность Postgres) - форматируются через `utils/format.ts`
 - Ошибки всегда в формате `{ error: { message, code } }`
