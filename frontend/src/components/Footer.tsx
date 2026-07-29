@@ -23,15 +23,6 @@ export function Footer() {
           <p className="footer-text">Пн–Вс: 10:00–21:00</p>
           <p className="footer-text">Без выходных</p>
         </div>
-
-        <div className="footer-col">
-          <p className="footer-heading">Мы в соцсетях</p>
-          <div className="footer-social">
-            <span>Instagram</span>
-            <span>WhatsApp</span>
-            <span>Telegram</span>
-          </div>
-        </div>
       </div>
 
       <div className="container footer-bottom">

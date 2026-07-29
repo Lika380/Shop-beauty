@@ -78,9 +78,9 @@ export function Cart() {
             <tbody>
               {items.map((item) => (
                 <tr key={item.id}>
-                  <td>{getProductName(item.product_id)}</td>
-                  <td>{money(item.price)}</td>
-                  <td>
+                  <td data-label="Товар">{getProductName(item.product_id)}</td>
+                  <td data-label="Цена">{money(item.price)}</td>
+                  <td data-label="Количество">
                     <input
                       type="number"
                       min={1}
@@ -95,7 +95,7 @@ export function Cart() {
                       <p className="text-muted">В наличии: {item.stock_quantity} шт.</p>
                     )}
                   </td>
-                  <td>{money(Number(item.price) * item.quantity)}</td>
+                  <td data-label="Сумма">{money(Number(item.price) * item.quantity)}</td>
                   <td>
                     <button
                       type="button"

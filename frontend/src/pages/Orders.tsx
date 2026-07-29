@@ -41,12 +41,12 @@ export function Orders() {
           <tbody>
             {orders.map((order) => (
               <tr key={order.id}>
-                <td>#{order.id}</td>
-                <td>{formatDate(order.created_at)}</td>
-                <td>
+                <td data-label="№">#{order.id}</td>
+                <td data-label="Дата">{formatDate(order.created_at)}</td>
+                <td data-label="Статус">
                   <span className={`status-pill status-${order.status}`}>{statusLabel(order.status)}</span>
                 </td>
-                <td>{money(order.total)}</td>
+                <td data-label="Сумма">{money(order.total)}</td>
                 <td>
                   <Link to={`/orders/${order.id}`}>Подробнее</Link>
                 </td>
